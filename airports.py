@@ -17,12 +17,9 @@ class Airports(HalModule):
             else:
                 delay = 'There are no known delays.'
 
-
             self.reply(msg, body=weather + '\n' + delay)
         except urllib.error.HTTPError:
             self.reply(msg, body='Cannot find airport "{}".'.format(ap))
-
-        
 
     def receive(self, msg):
         cmd = msg.body.split(' ')
