@@ -4,6 +4,13 @@ import json
 
 class Airports(CommandModule):
 
+    topics = {
+        'airport': '''Quert airport status.
+
+Usage:
+  !airport <three-letter airport code> '''
+    }
+
     def init(self):
         self.commands = {
             'airport': self.airport
