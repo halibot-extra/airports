@@ -8,7 +8,7 @@ class Airports(HalModule):
         try:
             url = 'http://services.faa.gov/airport/status/{}?format=application/json'.format(ap)
             req = urllib.request.urlopen(url)
-            data = json.loads(req.readall().decode('utf-8'))
+            data = json.loads(req.read().decode('utf-8'))
 
             weather = 'Weather at {name} is {weather[weather]}, {weather[temp]}, wind {weather[wind]}, visibility {weather[visibility]}.'.format(**data)
 
