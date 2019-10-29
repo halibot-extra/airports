@@ -4,6 +4,8 @@ import json
 
 class Airports(CommandModule):
 
+    HAL_MINIMUM = "0.2.0"
+
     topics = {
         'airport': '''Quert airport status.
 
